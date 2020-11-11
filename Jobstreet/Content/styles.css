@@ -1,0 +1,249 @@
+﻿body {
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #FFF;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    line-height: 28px;
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+.header {
+    background-color: #0a0b4d !important;
+}
+
+.social_icon a {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.banner_part {
+    z-index: 2;
+    background-color: #0d0f5b;
+    padding: 80px 0;
+}
+
+.nav-link {
+}
+
+a:hover {
+    color: #FD0585;
+}
+
+.btn-main {
+    color: #fff;
+    background-color: #e4115f;
+    border-color: #e4115f;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 9px 40px;
+}
+
+    .btn-main:hover {
+        background-color: #ff005e;
+        color: #FFF;
+    }
+
+.content_part {
+    z-index: 2;
+    background-color: #FFF;
+    padding: 80px 0;
+    color: #000;
+}
+
+.footer_part {
+    z-index: 2;
+    background-color: #0d0f5b;
+    padding: 80px 0;
+}
+
+.copyright_part {
+    z-index: 2;
+    background-color: #0a0b4d;
+}
+
+.side-btn {
+    color: #fff !important;
+    background-color: #e60278;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 9px 20px;
+    border: 1px solid #fff;
+}
+
+    .side-btn:hover, .side-btn.active {
+        background-color: #ff005e;
+        color: #FFF;
+        text-decoration: none;
+        cursor:pointer;
+    }
+    .three-col-container {
+        display:flex;
+        justify-content:center;
+        align-items:stretch;
+        flex-direction:row;
+    }
+    .flex-three-item {
+        flex-grow:1;
+        border-right:1px solid #808080;
+        padding:10px;
+    }
+    .no-border {
+        border:none !important;
+    }
+    .home-sub-head {
+        font-size:22px;
+    }
+    .icon-style {
+        margin-right:10px;
+    }
+    .home-list{
+        margin:10px 0;
+    }
+    .home-list-name {
+        font-size:16px;
+        color:blue;
+    }
+    .home-list-content {
+        font-size: 14px;
+        color:dimgrey;
+    }
+    #MainMenu a {
+        color: #FFF;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    #MainMenu a:hover {
+        color: #ff005e;
+    }
+    #MainMenu a:active {
+        border-bottom: 2px solid #ff005e !important;
+    }
+    .inner-page-head {
+        color:#FFF;
+        text-align:center;
+        width:100%;
+    }
+    .form-main {
+        background-color: #d4d4d4;
+        padding:60px 30px;
+    }
+    .link-line {
+       color:#000;
+       margin:15px 0;
+    }
+.row h2 {
+    text-align:center;
+    width:100%;
+}
+.list-cource {
+    padding:10px;
+    margin-bottom:10px;
+}
+.list-cource-table {
+    width:100%;
+}
+.list-cource-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+.list-cource-edit {
+    float:right;
+    color:blue !important;
+    background:none;
+    border:none;
+}
+.list-cource-edit:hover {
+    background:none;
+    border:none;
+}
+.form-view {
+    width:100%;
+}
+.form-view table {
+    width: 100%;
+}
+.form-view h1 {
+    text-align:center;
+}
+
+.company-address {
+    color: #797070;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+.list-jobs-table {
+    width: 100%;
+    table-layout:fixed;
+}
+.list-jobs-table tr {
+    margin-bottom:10px;
+}
+.list-jobs {
+padding: 10px;
+margin-bottom: 10px;
+}
+.list-jobs-table h2 {
+    width:100%;
+}
+.list-jobs-city {
+    color: #000;
+    font-size: 16px;
+    font-weight:bolder;
+}
+.list-jobs-date {
+    color: #C30B67;
+    text-align:right;
+}
+.list-jobs-experience {
+    color:#000;
+    font-weight:bold;
+}
+.list-jobs-desc {
+    color: #747474;
+}
+.list-jobs-apply{
+    text-align:right;
+}
+.form-dropdown {
+    height: 50px;
+}
+.count-class {
+    color:#000;
+    font-weight:bold;
+    font-size:16px;
+}
+.profile-area {
+    color: #000;
+    font-size: 16px;
+}
+.profile-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.btn-class {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 9px 20px;
+    border: 1px solid #fff;
+}
+.icon-link {
+    padding: 10px 7px;
+    font-size: 25px;
+    color: #fff;
+}
+    .icon-link:hover {
+        color: #ff005e;
+    }
+    .level2 {
+        padding:20px 0;
+    }

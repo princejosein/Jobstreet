@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Jobstreet.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="Content/styles.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+    <script src="Scripts/bootstrap.min.js" ></script>
+
+    <script src="Scripts/faw.js" ></script>
+
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function errorToastr(title, msg) {
+            toastr.error(title, msg)
+        }
+        function successToastr(title, msg) {
+            toastr.success(title, msg)
+        }
+        function swalAlert(title, text, icon, buttons = false, dangerMode = true, reload = false) {
+            swal({
+        title: title,
+        text: text,
+        icon: icon,
+        buttons: buttons,
+        dangerMode: dangerMode
+        })
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <%--Menu--%>
+        <nav class="header navbar navbar-expand-lg sticky-top navbar-dark">  
+        <a class="navbar-brand" href="Default.aspx">
+            <asp:Image ID="ImgLogo" runat="server" ImageUrl="~/Images/logo.png" width="45"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNav">
+        
+            
+            <asp:Menu ID="MainMenu" runat="server" Orientation="Horizontal" class="navbar-nav ml-auto">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/JobLists.aspx" Text="Jobs" Value="Jobs"></asp:MenuItem>
+                    <asp:MenuItem Text="Management" Value="Management">
+                        <asp:MenuItem NavigateUrl="~/Users.aspx" Text="Users Management" Value="Users Management"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Saved Jobs" Value="Saved Jobs" NavigateUrl="~/SavedJobs.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/JobApplications.aspx" Text="Job Applications" Value="Job Applications"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/AppliedJobs.aspx" Text="Applied Jobs" Value="Applied Jobs"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/CompanyProfile.aspx" Text="Company Profile" Value="Company Profile"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/UserProfile.aspx" Text="Profile" Value="Profile"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            
+            
+            <asp:Button ID="BtnLogOut" runat="server" Visible="false" Text="Logout" CssClass="btn btn-main m-2" OnClick="BtnLogOut_Click" />
+            
+            
+<%--            <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+        </li>     
+        </ul>--%>
+        </div>
+        
+            
+
+        
+        </nav>
+
+
+        <%--Head Area for individual page--%>
+        <div class="banner_part">
+		<div class="container">
+		<div class="row ">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+        </div>
+        </div>
+
+        <%--Content area for inner pages--%>
+        <div class="content_part">
+		<div class="container">
+			<div class="row">
+				<div class="col-md">
+					 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                     </asp:ContentPlaceHolder>
+				</div>
+			</div>
+		</div>
+	    </div>
+
+        <%--Footer area--%>
+        <div class="footer_part">
+        <div class="container">
+	        <div class="row">
+		        <div class="col-md text-center">
+                    <a href="Default.aspx"><asp:Image ID="ImgFLogo" runat="server" Width="45" ImageUrl="~/Images/logo.png" /></a>
+
+		        </div>
+		        <div class="col-md text-center">
+			        <h6>Discover</h6>
+
+			        <ul class="list-unstyled">
+				        <li>
+                            <a class="icon-link" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="icon-link" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a class="icon-link" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a class="icon-link" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+				        </li>
+			        </ul>
+		        </div>
+		        <div class="col-md text-center">
+			        <h6>Learn More</h6>
+			        <ul class="list-unstyled">
+				        <li><a href="About.aspx">About Us</a></li>
+			        </ul>
+			        </div>
+	        </div>
+        </div>
+        </div>
+
+        <%--Copyright  area--%>
+        <div class="copyright_part">
+		        <div class="container">
+        <div class="row p-5">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+	
+	        <p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank">Job Street</a></p>
+        </div>
+        <hr>
+        </div>
+        </div>
+        </div>
+           
+    </form>
+</body>
+</html>
